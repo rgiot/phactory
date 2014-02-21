@@ -1,1 +1,0 @@
-cmd /c g:\HxCFloppyEmulator_soft\HxCFloppyEmulator.exe "G:\cvs\projets\FloppyEmulator\Software\Floppy_Emulator_Control\AmstradCPC\AUTOBOOT.dsk"
