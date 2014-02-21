@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E3DAB26-15F5-4F62-A9B9-704CA7F3F15B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phactory</RootNamespace>
+    <AssemblyName>Phactory</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>run-build-2.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Binary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Binary\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DockPanel, Version=2.3.1.17693, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DockPanel\DockPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="HexBox, Version=1.4.1.43122, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.2.1.6466, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppStarter.cs" />
+    <Compile Include="BaseClass\PluginExtension.cs" />
+    <Compile Include="Controller\Build.cs" />
+    <Compile Include="Controller\Config.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\FileMonitor.cs" />
+    <Compile Include="Controller\Log.cs" />
+    <Compile Include="Controller\UserConfig.cs" />
+    <Compile Include="Modules\BigFile\Compiler\BigFileCompiler.cs" />
+    <Compile Include="Modules\BigFile\Compiler\Compiler.cs" />
+    <Compile Include="Modules\BigFile\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\BigFile\Compiler\Output.cs" />
+    <Compile Include="Modules\BigFile\Document.cs" />
+    <Compile Include="Modules\BigFile\Editor\Editor.cs" />
+    <Compile Include="Modules\BigFile\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BigFile\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BigFile\Plugin.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\BitmapCompiler.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\BitmapCompilerInterface.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\BitmapCompilerMode0.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\BitmapCompilerMode1.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\BitmapCompilerMode2.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\Compiler.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\Bitmap\Compiler\Output.cs" />
+    <Compile Include="Modules\Bitmap\Document.cs" />
+    <Compile Include="Modules\Bitmap\Editor\Editor.cs" />
+    <Compile Include="Modules\Bitmap\Editor\PreviewColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bitmap\Editor\PreviewColorPicker.Designer.cs">
+      <DependentUpon>PreviewColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bitmap\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Bitmap\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bitmap\Plugin.cs" />
+    <Compile Include="Database\Node.cs" />
+    <Compile Include="Database\Project.cs" />
+    <Compile Include="Database\Resource.cs" />
+    <Compile Include="Modules\Cloud\Compiler\CloudCompiler.cs" />
+    <Compile Include="Modules\Cloud\Compiler\Compiler.cs" />
+    <Compile Include="Modules\Cloud\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\Cloud\Compiler\Output.cs" />
+    <Compile Include="Modules\Cloud\Document.cs" />
+    <Compile Include="Modules\Cloud\Editor\Editor.cs" />
+    <Compile Include="Modules\Cloud\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Cloud\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Cloud\Plugin.cs" />
+    <Compile Include="Modules\DSK\Tool\ManageDSK.cs" />
+    <Compile Include="Modules\DSK\Tool\WinAPE.cs" />
+    <Compile Include="Modules\HxCConverter\Plugin.cs" />
+    <Compile Include="Modules\HxCConverter\Tool\Tool.cs" />
+    <Compile Include="Modules\HxCConverter\Tool\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\HxCConverter\Tool\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DSK\Compiler\Compiler.cs" />
+    <Compile Include="Modules\DSK\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\DSK\Compiler\Output.cs" />
+    <Compile Include="Modules\DSK\Document.cs" />
+    <Compile Include="Modules\DSK\Editor\Editor.cs" />
+    <Compile Include="Modules\DSK\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DSK\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DSK\Plugin.cs" />
+    <Compile Include="Modules\DSK\Runner\Runner.cs" />
+    <Compile Include="Helper\ClassSerializer.cs" />
+    <Compile Include="Helper\Crc32.cs" />
+    <Compile Include="Helper\DBHelper.cs" />
+    <Compile Include="Helper\FileDB.cs" />
+    <Compile Include="Helper\FullScreenHelper.cs" />
+    <Compile Include="Helper\Shell.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Helper\TopologicalSort.cs" />
+    <Compile Include="Modules\HexEdit\Editor\Editor.cs" />
+    <Compile Include="Modules\HexEdit\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HexEdit\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HexEdit\Plugin.cs" />
+    <Compile Include="Modules\ImageEdit\Editor\Editor.cs" />
+    <Compile Include="Modules\ImageEdit\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ImageEdit\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ImageEdit\Plugin.cs" />
+    <Compile Include="Interface\Compiler.cs" />
+    <Compile Include="Interface\Editor.cs" />
+    <Compile Include="Interface\Host.cs" />
+    <Compile Include="Interface\Plugin.cs" />
+    <Compile Include="Interface\PluginExtension.cs" />
+    <Compile Include="Interface\Runner.cs" />
+    <Compile Include="Interface\Tool.cs" />
+    <Compile Include="Modules\Packer\Compiler\Compiler.cs" />
+    <Compile Include="Modules\Packer\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\Packer\Compiler\Output.cs" />
+    <Compile Include="Modules\Packer\Document.cs" />
+    <Compile Include="Modules\Packer\Editor\Editor.cs" />
+    <Compile Include="Modules\Packer\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Packer\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Packer\Plugin.cs" />
+    <Compile Include="Modules\PixelCalculator\Plugin.cs" />
+    <Compile Include="Modules\PixelCalculator\Tool\Tool.cs" />
+    <Compile Include="Modules\PixelCalculator\Tool\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\PixelCalculator\Tool\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RawBitmap\Compiler\RawCompiler.cs" />
+    <Compile Include="Modules\SourceEdit\Editor\Find_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SourceEdit\Editor\TextUtils.cs" />
+    <Compile Include="Plugin\Host.cs" />
+    <Compile Include="Plugin\PluginManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Modules\BigFile\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bitmap\Editor\PreviewColorPicker.resx">
+      <DependentUpon>PreviewColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bitmap\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Cloud\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HxCConverter\Tool\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DSK\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HexEdit\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ImageEdit\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Packer\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PixelCalculator\Tool\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SourceEdit\Editor\Find_Dialog.resx">
+      <DependentUpon>Find_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RawBitmap\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SourceEdit\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Text\Editor\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Find.resx">
+      <DependentUpon>Find.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewFile.resx">
+      <DependentUpon>NewFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewProject.resx">
+      <DependentUpon>NewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Output.resx">
+      <DependentUpon>Output.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PluginView.resx">
+      <DependentUpon>PluginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProjectExplorer.resx">
+      <DependentUpon>ProjectExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProjectProperties.resx">
+      <DependentUpon>ProjectProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RemoveOrDelete.resx">
+      <DependentUpon>RemoveOrDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ResourceSelector.resx">
+      <DependentUpon>ResourceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Modules\SourceEdit\Editor\CHighlighting.xshd" />
+    <None Include="Highlighting.xshd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Modules\SourceEdit\Editor\z80Highlighting.xshd" />
+    <None Include="Resources\Delete.bmp" />
+    <None Include="Resources\infoBubble.bmp" />
+    <None Include="Resources\NewDocument.bmp" />
+    <None Include="Resources\openfolder_24.bmp" />
+    <None Include="Resources\Options.bmp" />
+    <None Include="Resources\Save.bmp" />
+    <None Include="Resources\SaveAll.bmp" />
+    <None Include="Resources\Run.bmp" />
+    <None Include="Resources\Find.bmp" />
+    <Content Include="ICSharpCode.TextEditor.dll" />
+    <None Include="Resources\Build2.png" />
+    <None Include="Resources\Build.bmp" />
+    <None Include="Resources\build3.png" />
+    <None Include="Resources\run-build-clean.ico" />
+    <None Include="Resources\run-build-2.ico" />
+    <None Include="Resources\building-go.ico" />
+    <None Include="Resources\building-go1.ico" />
+    <None Include="Resources\system-run-5.ico" />
+    <None Include="Resources\run-build-install.ico" />
+    <None Include="Resources\edit-find-6.ico" />
+    <None Include="Resources\edit-find-5.ico" />
+    <None Include="Resources\document-save-all.ico" />
+    <None Include="Resources\document-close-2.ico" />
+    <None Include="Resources\window-close-2.ico" />
+    <None Include="Resources\door-open.ico" />
+    <None Include="Resources\document-open-5.ico" />
+    <None Include="Resources\document-open-51.ico" />
+    <None Include="Resources\document-open-52.ico" />
+    <None Include="Resources\document-open-folder.ico" />
+    <None Include="Resources\document-new-3.ico" />
+    <None Include="Resources\document-new-31.ico" />
+    <None Include="Resources\document-open-folder1.ico" />
+    <None Include="Resources\window-close-21.ico" />
+    <None Include="Resources\document-save-all1.ico" />
+    <None Include="Resources\run-build-install1.ico" />
+    <None Include="Resources\run-build-clean1.ico" />
+    <None Include="Resources\run-build-21.ico" />
+    <None Include="Resources\edit-find-51.ico" />
+    <None Include="Resources\configure-2.ico" />
+    <None Include="Resources\configure-3.ico" />
+    <None Include="Resources\run-build-configure.ico" />
+    <None Include="Resources\games-config-custom.ico" />
+    <None Include="Resources\configure-4.ico" />
+    <None Include="Resources\configure-41.ico" />
+    <None Include="Resources\document-properties-2.ico" />
+    <None Include="Resources\document-properties-21.ico" />
+    <None Include="Resources\help-about.ico" />
+    <None Include="Resources\help.ico" />
+    <None Include="Resources\document-properties-22.ico" />
+    <None Include="Resources\CondenseLogo.bmp" />
+    <Content Include="run-build-2.ico" />
+    <Content Include="ThirdParty\addhead.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\cpcxfs.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\cpmdisks.def">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\discsys.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\Empty.dsk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Modules\RawBitmap\Compiler\Compiler.cs" />
+    <Compile Include="Modules\RawBitmap\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\RawBitmap\Compiler\Output.cs" />
+    <Compile Include="Modules\RawBitmap\Document.cs" />
+    <Compile Include="Modules\RawBitmap\Editor\Editor.cs" />
+    <Compile Include="Modules\RawBitmap\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RawBitmap\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RawBitmap\Plugin.cs" />
+    <Compile Include="Modules\SDCC\Compiler\Compiler.cs" />
+    <Compile Include="Modules\SDCC\Compiler\Dependencies.cs" />
+    <Compile Include="Modules\SDCC\Compiler\Output.cs" />
+    <Compile Include="Modules\SDCC\Plugin.cs" />
+    <Compile Include="Modules\SourceEdit\Editor\Editor.cs" />
+    <Compile Include="Modules\SourceEdit\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SourceEdit\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SourceEdit\Plugin.cs" />
+    <Compile Include="Text\Compiler\Compiler.cs" />
+    <Compile Include="Text\Compiler\Dependencies.cs" />
+    <Compile Include="Text\Compiler\Output.cs" />
+    <Compile Include="Text\Compiler\TextCompiler.cs" />
+    <Compile Include="Text\Document.cs" />
+    <Compile Include="Text\Editor\Editor.cs" />
+    <Compile Include="Text\Editor\View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Text\Editor\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Text\Plugin.cs" />
+    <Compile Include="View\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Find.Designer.cs">
+      <DependentUpon>Find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewFile.Designer.cs">
+      <DependentUpon>NewFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewProject.Designer.cs">
+      <DependentUpon>NewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Output.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Output.Designer.cs">
+      <DependentUpon>Output.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PluginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PluginView.Designer.cs">
+      <DependentUpon>PluginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProjectExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProjectExplorer.Designer.cs">
+      <DependentUpon>ProjectExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProjectProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProjectProperties.Designer.cs">
+      <DependentUpon>ProjectProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RemoveOrDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RemoveOrDelete.Designer.cs">
+      <DependentUpon>RemoveOrDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResourceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ResourceSelector.Designer.cs">
+      <DependentUpon>ResourceSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Content Include="ThirdParty\BitBuster.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\exomizer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\exoopt.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\flopimage_convert.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\ManageDsk.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\Pasmo.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\SDCC2Pasmo.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\SDCC\bin\makebin.exe" />
+    <Content Include="ThirdParty\SDCC\bin\packihx.exe" />
+    <Content Include="ThirdParty\SDCC\bin\readline5.dll" />
+    <Content Include="ThirdParty\SDCC\bin\s51.exe" />
+    <Content Include="ThirdParty\SDCC\bin\savr.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdar.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdas390.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdas6808.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdas8051.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdasgb.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdasrab.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdasz80.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdcc.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdcclib.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdcdb.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdcpp.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdld.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdld6808.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdldgb.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdldz80.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdnm.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdobjcopy.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sdranlib.exe" />
+    <Content Include="ThirdParty\SDCC\bin\shc08.exe" />
+    <Content Include="ThirdParty\SDCC\bin\sz80.exe" />
+    <Content Include="ThirdParty\SDCC\COPYING.txt" />
+    <Content Include="ThirdParty\SDCC\COPYING3.txt" />
+    <Content Include="ThirdParty\SDCC\include\asm\default\features.h" />
+    <Content Include="ThirdParty\SDCC\include\asm\z80\features.h" />
+    <Content Include="ThirdParty\SDCC\include\assert.h" />
+    <Content Include="ThirdParty\SDCC\include\ctype.h" />
+    <Content Include="ThirdParty\SDCC\include\ds80c390.h" />
+    <Content Include="ThirdParty\SDCC\include\errno.h" />
+    <Content Include="ThirdParty\SDCC\include\float.h" />
+    <Content Include="ThirdParty\SDCC\include\iso646.h" />
+    <Content Include="ThirdParty\SDCC\include\limits.h" />
+    <Content Include="ThirdParty\SDCC\include\malloc.h" />
+    <Content Include="ThirdParty\SDCC\include\math.h" />
+    <Content Include="ThirdParty\SDCC\include\sdcc-lib.h" />
+    <Content Include="ThirdParty\SDCC\include\setjmp.h" />
+    <Content Include="ThirdParty\SDCC\include\stdalign.h" />
+    <Content Include="ThirdParty\SDCC\include\stdarg.h" />
+    <Content Include="ThirdParty\SDCC\include\stdbool.h" />
+    <Content Include="ThirdParty\SDCC\include\stddef.h" />
+    <Content Include="ThirdParty\SDCC\include\stdint.h" />
+    <Content Include="ThirdParty\SDCC\include\stdio.h" />
+    <Content Include="ThirdParty\SDCC\include\stdlib.h" />
+    <Content Include="ThirdParty\SDCC\include\stdnoreturn.h" />
+    <Content Include="ThirdParty\SDCC\include\string.h" />
+    <Content Include="ThirdParty\SDCC\include\time.h" />
+    <Content Include="ThirdParty\SDCC\include\tinibios.h" />
+    <Content Include="ThirdParty\SDCC\include\typeof.h" />
+    <Content Include="ThirdParty\SDCC\lib\src\abs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\acosf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\asincosf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\asinf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\assert.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\atan2f.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\atanf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\bpx.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\ceilf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\cosf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\coshf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\cotf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\errno.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\expf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\fabsf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\floorf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\frexpf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\gets.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\labs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\ldexpf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\log10f.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\logf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\modff.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\powf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\printfl.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\printf_fast.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\printf_fast_f.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\printf_large.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\printf_tiny.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\puts.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\rand.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\serial.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\ser_ir.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\ser_ir_cts_rts.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\sincosf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\sincoshf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\sinf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\sinhf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\sprintf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\sqrtf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\strxfrm.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\tancotf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\tanf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\tanhf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\time.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\vprintf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\abs.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\crt0.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\crtcall.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\divmixed.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\divsigned.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\divunsigned.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\fstubs.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\heap.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\memmove.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\modmixed.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\modsigned.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\modunsigned.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\mul.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\mulchar.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\putchar.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\setjmp.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\strcpy.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\strlen.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\z80\stubs.s" />
+    <Content Include="ThirdParty\SDCC\lib\src\_atof.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_atoi.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_atol.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_autobaud.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_bp.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_calloc.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_decdptr.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_divsint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_divslong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_divslonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_divuint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_divulong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_divulonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_free.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fs2schar.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fs2sint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fs2slong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fs2uchar.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fs2uint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fs2ulong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsadd.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fscmp.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsdiv.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fseq.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsget1arg.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsget2args.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsgt.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fslt.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsmul.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsneq.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsnormalize.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsreturnval.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsrshift.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fssub.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_fsswapargs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_gptrget.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_gptrgetc.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_gptrput.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_heap.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_iscntrl.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_isdigit.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_isgraph.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_islower.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_isprint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_ispunct.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_isspace.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_isupper.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_isxdigit.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_itoa.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_logexpf.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_ltoa.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_malloc.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_memchr.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_memcmp.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_memcpy.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_memmove.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_memset.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_modsint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_modslong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_moduint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_modulong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_mulint.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_mullong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_mullonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_realloc.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_rlslonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_rlulonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_rrslonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_rrulonglong.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_schar2fs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_ser.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_setjmp.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_sint2fs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_slong2fs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_spx.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_startup.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strcat.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strchr.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strcmp.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strcpy.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strcspn.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strlen.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strncat.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strncmp.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strncpy.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strpbrk.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strrchr.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strspn.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strstr.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_strtok.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_uchar2fs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_uint2fs.c" />
+    <Content Include="ThirdParty\SDCC\lib\src\_ulong2fs.c" />
+    <Content Include="ThirdParty\SDCC\sdcc.ico" />
+    <Content Include="ThirdParty\SDCC\uninstall.exe" />
+    <Content Include="ThirdParty\WinApe.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ThirdParty\WinAPE.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ThirdParty\ROM\AMSDOS.ROM">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ThirdParty\ROM\BASIC1-1.ROM">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ThirdParty\ROM\MULTIFACE2.ROM">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ThirdParty\ROM\OS6128.ROM">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ThirdParty\ROM\PARADOS.ROM">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ThirdParty\SDCC\bin\as2gbmap.cmd" />
+    <None Include="ThirdParty\SDCC\bin\sdcdb.el" />
+    <None Include="ThirdParty\SDCC\bin\sdcdbsrc.el" />
+    <None Include="ThirdParty\SDCC\lib\large\libfloat.lib" />
+    <None Include="ThirdParty\SDCC\lib\large\libint.lib" />
+    <None Include="ThirdParty\SDCC\lib\large\liblong.lib" />
+    <None Include="ThirdParty\SDCC\lib\large\liblonglong.lib" />
+    <None Include="ThirdParty\SDCC\lib\large\libsdcc.lib" />
+    <None Include="ThirdParty\SDCC\lib\large\mcs51.lib" />
+    <None Include="ThirdParty\SDCC\lib\medium\libfloat.lib" />
+    <None Include="ThirdParty\SDCC\lib\medium\libint.lib" />
+    <None Include="ThirdParty\SDCC\lib\medium\liblong.lib" />
+    <None Include="ThirdParty\SDCC\lib\medium\liblonglong.lib" />
+    <None Include="ThirdParty\SDCC\lib\medium\libsdcc.lib" />
+    <None Include="ThirdParty\SDCC\lib\medium\mcs51.lib" />
+    <None Include="ThirdParty\SDCC\lib\small-stack-auto\libfloat.lib" />
+    <None Include="ThirdParty\SDCC\lib\small-stack-auto\libint.lib" />
+    <None Include="ThirdParty\SDCC\lib\small-stack-auto\liblong.lib" />
+    <None Include="ThirdParty\SDCC\lib\small-stack-auto\liblonglong.lib" />
+    <None Include="ThirdParty\SDCC\lib\small-stack-auto\libsdcc.lib" />
+    <None Include="ThirdParty\SDCC\lib\small-stack-auto\mcs51.lib" />
+    <None Include="ThirdParty\SDCC\lib\small\libfloat.lib" />
+    <None Include="ThirdParty\SDCC\lib\small\libint.lib" />
+    <None Include="ThirdParty\SDCC\lib\small\liblong.lib" />
+    <None Include="ThirdParty\SDCC\lib\small\liblonglong.lib" />
+    <None Include="ThirdParty\SDCC\lib\small\libsdcc.lib" />
+    <None Include="ThirdParty\SDCC\lib\small\mcs51.lib" />
+    <None Include="ThirdParty\SDCC\lib\z80\crt0.rel" />
+    <None Include="ThirdParty\SDCC\lib\z80\z80.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HexBox.dll" />
+    <Content Include="Phactory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ThirdParty\SDCC\lib\src\large\" />
+    <Folder Include="ThirdParty\SDCC\lib\src\medium\" />
+    <Folder Include="ThirdParty\SDCC\lib\src\small\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(ProjectDir)ThirdParty\SDCC" "$(TargetDir)ThirdParty\SDCC" /E /I /F /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

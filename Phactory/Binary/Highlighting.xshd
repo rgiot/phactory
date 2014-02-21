@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SyntaxDefinition name="c_z80" extensions=".asm;.z80;.inc">
+  <RuleSets>
+    <RuleSet ignorecase="true">
+      <Delimiters>{}-+/*%=();^,$#&amp;|!&lt;&gt;:=.-+/*();^,$#&amp;|!&lt;&gt;:=</Delimiters>
+      <Span name="Comments" bold="false" italic="false" color="Green" stopateol="true">
+        <Begin>;</Begin>
+      </Span>
+      <Span name="AltComments" bold="false" italic="false" color="Green" stopateol="true">
+        <Begin>//</Begin>
+      </Span>
+      <Span name="MultilineComments" bold="false" italic="false" color="Green" stopateol="false">
+        <Begin>/*</Begin>
+        <End>*/</End>
+      </Span>
+      <Span name="Strings" bold="false" italic="false" color="Red" stopateol="true">
+        <Begin>"</Begin>
+        <End>"</End>
+      </Span>
+      <Span name="Characters" bold="false" italic="false" color="Red" stopateol="true">
+        <Begin>'</Begin>
+        <End>'</End>
+      </Span>
+      <KeyWords name="Directives" bold="false" italic="false" color="Blue">
+        <Key word="include"></Key>
+      </KeyWords>
+      <KeyWords name="KeyWords" bold="false" italic="false" color="Blue">
+        <Key word="if"></Key>
+        <Key word="else"></Key>
+        <Key word="void"></Key>
+        <Key word="int"></Key>
+        <Key word="bool"></Key>
+        <Key word="byte"></Key>
+        <Key word="char"></Key>
+        <Key word="double"></Key>
+        <Key word="float"></Key>
+        <Key word="signed"></Key>
+        <Key word="unsigned"></Key>
+        <Key word="volatile"></Key>
+        <Key word="extern"></Key>
+        <Key word="short"></Key>
+        <Key word="struct"></Key>
+        <Key word="static"></Key>
+        <Key word="switch"></Key>
+        <Key word="case"></Key>
+        <Key word="const"></Key>
+        <Key word="return"></Key>
+        <Key word="continue"></Key>
+        <Key word="break"></Key>
+        <Key word="enum"></Key>
+        <Key word="long"></Key>
+        <Key word="sizeof"></Key>
+        <Key word="while"></Key>
+        <Key word="for"></Key>
+        <Key word="do"></Key>
+        <Key word="public"></Key>
+        <Key word = "private"></Key>
+        <Key word = "org" />
+        <Key word = "define" />
+        <Key word = "space" />
+        <Key word = "segment" />
+        <Key word = "public" />
+        <Key word = "extern" />
+        <Key word = "db" />
+        <Key word = "list" />
+        <Key word = "nolist" />
+        <Key word = "inc" />
+        <Key word= "dec" />
+        <Key word = "ld" />
+        <Key word = "srl" />
+        <Key word = "call" />
+        <Key word = "jp" />
+        <Key word = "ret" />
+        <Key word = "push" />
+        <Key word = "pop" />
+        <Key word = "inc" />
+        <Key word = "add" />
+        <Key word = "sub" />
+        <Key word = "reti" />
+        <Key word = "sbc" />
+        <Key word = "jr" />
+        <Key word = "cp" />
+        <Key word = "nop" />
+        <Key word = "rcla" />
+        <Key word = "ex" />
+        <Key word = "exx" />
+        <Key word = "rrca" />
+        <Key word = "djnz" />
+        <Key word = "rla" />
+        <Key word = "rra" />
+        <Key word = "daa" />
+        <Key word = "cpl" />
+        <Key word = "ldir" />
+        <Key word = "scf" />
+        <Key word = "ccf" />
+        <Key word = "halt" />
+        <Key word = "adc" />
+        <Key word = "xor" />
+        <Key word = "or" />
+        <Key word = "and" />
+        <Key word = "not" />
+        <Key word = "rst" />
+        <Key word = "rlc" />
+        <Key word = "rrc" />
+        <Key word = "rl" />
+        <Key word = "rr" />
+        <Key word = "sla" />
+        <Key word = "sra" />
+        <Key word = "bit" />
+        <Key word = "set" />
+        <Key word = "res" />
+        <Key word = "in" />
+        <Key word = "out" />
+        <Key word = "retn" />
+        <Key word = "neg" />
+        <Key word = "im" />
+        <Key word = "ldi" />
+        <Key word = "ini" />
+        <Key word = "outi" />
+        <Key word = "ldd" />
+        <Key word = "cpd" />
+        <Key word = "ind" />
+        <Key word = "outd" />
+        <Key word = "cpir" />
+        <Key word = "inir" />
+        <Key word = "otir" />
+        <Key word = "lddr" />
+        <Key word = "cpdr" />
+        <Key word = "indr" />
+        <Key word = "otdr" />
+        <Key word = "ei" />
+        <Key word = "di" />
+        <Key word = "noni" />
+        <Key word = "db" />
+        <Key word = "dw" />
+        <Key word = "nolist" />
+        <Key word = "list" />
+      </KeyWords>
+      <KeyWords name="RegistersAndFlags" bold="false" italic="false" color="DarkRed">
+        <Key word = "h" />
+        <Key word = "l" />
+        <Key word = "hl" />
+        <Key word = "a" />
+        <Key word = "f" />
+        <Key word = "af" />
+        <Key word = "af'" />
+        <Key word = "b" />
+        <Key word = "c" />
+        <Key word = "bc" />
+        <Key word = "d" />
+        <Key word = "e" />
+        <Key word = "de" />
+        <Key word = "ix" />
+        <Key word = "iy" />
+        <Key word = "z" />
+        <Key word = "nz" />
+        <Key word = "c" />
+        <Key word = "nc" />
+        <Key word = "p" />
+        <Key word = "np" />
+        <Key word = "pc" />
+        <Key word = "sp" />
+      </KeyWords>
+    </RuleSet>
+  </RuleSets>
+</SyntaxDefinition>

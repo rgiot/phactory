@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0</Version>
+  <TruncateFiles>false</TruncateFiles>
+  <FilesInBank>false</FilesInBank>
+  <BaseAddress>10240</BaseAddress>
+  <Files>
+    <File>
+      <ResourceID>278</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+    </File>
+    <File>
+      <ResourceID>279</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+    </File>
+    <File>
+      <ResourceID>280</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+    </File>
+    <File>
+      <ResourceID>289</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+    </File>
+    <File>
+      <ResourceID>292</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+    </File>
+  </Files>
+</Document>

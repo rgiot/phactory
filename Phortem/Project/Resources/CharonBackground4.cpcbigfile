@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0</Version>
+  <TruncateFiles>false</TruncateFiles>
+  <FilesInBank>false</FilesInBank>
+  <BaseAddress>128</BaseAddress>
+  <Files>
+    <File>
+      <ResourceID>3084</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+      <SetAddress>false</SetAddress>
+      <Address>0</Address>
+    </File>
+    <File>
+      <ResourceID>3085</ResourceID>
+      <ResourceCPCBigFileID>-1</ResourceCPCBigFileID>
+      <Pad256>false</Pad256>
+      <SetAddress>false</SetAddress>
+      <Address>0</Address>
+    </File>
+  </Files>
+</Document>

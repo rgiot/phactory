@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0</Version>
+  <PackerType>BitBuster</PackerType>
+  <Items>
+    <Item>
+      <ResourceID>1551</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>1552</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>1559</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>2859</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>2861</ResourceID>
+    </Item>
+  </Items>
+</Document>

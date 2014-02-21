@@ -1,0 +1,2 @@
+
+	read "main.asm"

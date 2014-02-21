@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SyntaxDefinition name="C" extensions=".c;.h">
+  <RuleSets>
+    <RuleSet ignorecase="true">
+      <Delimiters>{}-+/*%=();^,$#&amp;|!&lt;&gt;:=</Delimiters>
+      <Span name="Comments" bold="false" italic="false" color="Green" stopateol="true">
+        <Begin>;</Begin>
+      </Span>
+      <Span name="MultilineComments" bold="false" italic="false" color="Green" stopateol="false">
+        <Begin>/*</Begin>
+        <End>*/</End>
+      </Span>
+      <Span name="Strings" bold="false" italic="false" color="Red" stopateol="true">
+        <Begin>"</Begin>
+        <End>"</End>
+      </Span>
+      <Span name="Characters" bold="false" italic="false" color="Red" stopateol="true">
+        <Begin>'</Begin>
+        <End>'</End>
+      </Span>
+      <KeyWords name="Directives" bold="false" italic="false" color="Blue">
+        <Key word="include"></Key>
+      </KeyWords>
+      <KeyWords name="KeyWords" bold="false" italic="false" color="Blue">
+        <Key word="if"></Key>
+        <Key word="else"></Key>
+        <Key word="void"></Key>
+        <Key word="int"></Key>
+        <Key word="bool"></Key>
+        <Key word="byte"></Key>
+        <Key word="char"></Key>
+        <Key word="double"></Key>
+        <Key word="float"></Key>
+        <Key word="signed"></Key>
+        <Key word="unsigned"></Key>
+        <Key word="volatile"></Key>
+        <Key word="extern"></Key>
+        <Key word="short"></Key>
+        <Key word="struct"></Key>
+        <Key word="static"></Key>
+        <Key word="switch"></Key>
+        <Key word="case"></Key>
+        <Key word="const"></Key>
+        <Key word="return"></Key>
+        <Key word="continue"></Key>
+        <Key word="break"></Key>
+        <Key word="enum"></Key>
+        <Key word="long"></Key>
+        <Key word="sizeof"></Key>
+        <Key word="while"></Key>
+        <Key word="for"></Key>
+        <Key word="do"></Key>
+        <Key word="public"></Key>
+        <Key word = "private"></Key>
+      </KeyWords>
+    </RuleSet>
+  </RuleSets>
+</SyntaxDefinition>

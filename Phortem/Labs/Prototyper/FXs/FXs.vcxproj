@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DAD1740E-25E5-46BC-960E-031635A4AF5E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SDLtemplate</RootNamespace>
+    <ProjectName>FXs</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)\bin\</OutDir>
+    <IntDir>obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)\bin\</OutDir>
+    <IntDir>obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;sdlmain.lib;sdl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)\lib\sdl.dll" "$(ProjectDir)\bin\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdlmain.lib;sdl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PreLinkEvent>
+      <Command>copy lib\sll.dll bin</Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)\lib\sdl.dll" "$(ProjectDir)\bin\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Track.h" />
+    <ClInclude Include="Angel.h" />
+    <ClInclude Include="Batman.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="Costix.h" />
+    <ClInclude Include="Daemon.h" />
+    <ClInclude Include="Debauche.h" />
+    <ClInclude Include="Default.h" />
+    <ClInclude Include="Death.h" />
+    <ClInclude Include="DoomTransit.h" />
+    <ClInclude Include="FireWorks.h" />
+    <ClInclude Include="fxbase.h" />
+    <ClInclude Include="fxmanager.h" />
+    <ClInclude Include="GL3DScroll.h" />
+    <ClInclude Include="GLCube.h" />
+    <ClInclude Include="GLIntro.h" />
+    <ClInclude Include="include\begin_code.h" />
+    <ClInclude Include="include\close_code.h" />
+    <ClInclude Include="include\SDL.h" />
+    <ClInclude Include="include\SDL_active.h" />
+    <ClInclude Include="include\SDL_audio.h" />
+    <ClInclude Include="include\SDL_byteorder.h" />
+    <ClInclude Include="include\SDL_cdrom.h" />
+    <ClInclude Include="include\SDL_config.h" />
+    <ClInclude Include="include\SDL_config_amiga.h" />
+    <ClInclude Include="include\SDL_config_dreamcast.h" />
+    <ClInclude Include="include\SDL_config_macos.h" />
+    <ClInclude Include="include\SDL_config_macosx.h" />
+    <ClInclude Include="include\SDL_config_minimal.h" />
+    <ClInclude Include="include\SDL_config_nds.h" />
+    <ClInclude Include="include\SDL_config_os2.h" />
+    <ClInclude Include="include\SDL_config_symbian.h" />
+    <ClInclude Include="include\SDL_config_win32.h" />
+    <ClInclude Include="include\SDL_copying.h" />
+    <ClInclude Include="include\SDL_cpuinfo.h" />
+    <ClInclude Include="include\SDL_endian.h" />
+    <ClInclude Include="include\SDL_error.h" />
+    <ClInclude Include="include\SDL_events.h" />
+    <ClInclude Include="include\SDL_getenv.h" />
+    <ClInclude Include="include\SDL_joystick.h" />
+    <ClInclude Include="include\SDL_keyboard.h" />
+    <ClInclude Include="include\SDL_keysym.h" />
+    <ClInclude Include="include\SDL_loadso.h" />
+    <ClInclude Include="include\SDL_main.h" />
+    <ClInclude Include="include\SDL_mouse.h" />
+    <ClInclude Include="include\SDL_mutex.h" />
+    <ClInclude Include="include\SDL_name.h" />
+    <ClInclude Include="include\SDL_opengl.h" />
+    <ClInclude Include="include\SDL_platform.h" />
+    <ClInclude Include="include\SDL_quit.h" />
+    <ClInclude Include="include\SDL_rwops.h" />
+    <ClInclude Include="include\SDL_stdinc.h" />
+    <ClInclude Include="include\SDL_syswm.h" />
+    <ClInclude Include="include\SDL_thread.h" />
+    <ClInclude Include="include\SDL_timer.h" />
+    <ClInclude Include="include\SDL_types.h" />
+    <ClInclude Include="include\SDL_version.h" />
+    <ClInclude Include="include\SDL_video.h" />
+    <ClInclude Include="InfiniteZoom.h" />
+    <ClInclude Include="Intro.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="pixel.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="Rubber.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TransitBouncing.h" />
+    <ClInclude Include="TransitCloudLines.h" />
+    <ClInclude Include="TransitLines.h" />
+    <ClInclude Include="TransitRect.h" />
+    <ClInclude Include="window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CloudConvert.cpp" />
+    <ClCompile Include="..\Track.cpp" />
+    <ClCompile Include="Angel.cpp" />
+    <ClCompile Include="AngelScrollGen.cpp" />
+    <ClCompile Include="Batman.cpp" />
+    <ClCompile Include="Costix.cpp" />
+    <ClCompile Include="Daemon.cpp" />
+    <ClCompile Include="Debauche.cpp" />
+    <ClCompile Include="Default.cpp" />
+    <ClCompile Include="Death.cpp">
+      <DeploymentContent>false</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="DoomTransit.cpp" />
+    <ClCompile Include="FireWorks.cpp" />
+    <ClCompile Include="fxbase.cpp" />
+    <ClCompile Include="fxmanager.cpp" />
+    <ClCompile Include="GL3DScroll.cpp" />
+    <ClCompile Include="GLCube.cpp" />
+    <ClCompile Include="GLIntro.cpp" />
+    <ClCompile Include="InfiniteZoom.cpp" />
+    <ClCompile Include="Intro.cpp" />
+    <ClCompile Include="pixel.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="Rubber.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TransitBouncing.cpp" />
+    <ClCompile Include="TransitCloudLines.cpp" />
+    <ClCompile Include="TransitLines.cpp" />
+    <ClCompile Include="TransitLinesFX1.cpp" />
+    <ClCompile Include="TransitLinesFX2.cpp" />
+    <ClCompile Include="TransitLinesFX3.cpp" />
+    <ClCompile Include="TransitRect.cpp" />
+    <ClCompile Include="window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Documents and Settings\Arnaud Storq\Desktop\Debauche_384x205.raw" />
+    <None Include="Death_384x205.raw">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="HighLines.bin">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

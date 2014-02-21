@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1.0</Version>
+  <Items>
+    <Item>
+      <ResourceID>757</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>759</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>761</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>762</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>763</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>764</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>765</ResourceID>
+    </Item>
+    <Item>
+      <ResourceID>766</ResourceID>
+    </Item>
+  </Items>
+</Document>

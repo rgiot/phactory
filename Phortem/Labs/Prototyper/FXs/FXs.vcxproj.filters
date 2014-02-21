@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\SDL">
+      <UniqueIdentifier>{702e7358-02d2-4208-b0c5-8a273281a81f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FX">
+      <UniqueIdentifier>{54b8b436-3172-4e9c-a15f-53610e298b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FX">
+      <UniqueIdentifier>{81bb8e95-e69a-4599-8b3a-2fd4d8766fef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\SDL_config.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_amiga.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_dreamcast.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_macos.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_macosx.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_minimal.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_nds.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_os2.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_symbian.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_config_win32.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_copying.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_cpuinfo.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_endian.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_error.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_events.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_getenv.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_joystick.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_keyboard.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_keysym.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_loadso.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_main.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_mouse.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_mutex.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_name.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_opengl.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_platform.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_quit.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_rwops.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_stdinc.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_syswm.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_thread.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_timer.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_types.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_version.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_video.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\begin_code.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\close_code.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_active.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_audio.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_byteorder.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SDL_cdrom.h">
+      <Filter>Header Files\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="pixel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fxbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fxmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Default.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Death.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Debauche.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Daemon.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Rubber.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Track.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitLines.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLIntro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Intro.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Angel.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Batman.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitBouncing.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitCloudLines.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Costix.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="GLCube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfiniteZoom.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitRect.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="GL3DScroll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FireWorks.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="DoomTransit.h">
+      <Filter>Header Files\FX</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pixel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fxbase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fxmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Default.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Death.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Debauche.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Daemon.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Rubber.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CloudConvert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Track.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitLines.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitLinesFX1.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitLinesFX2.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="GLIntro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Intro.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitLinesFX3.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Angel.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="AngelScrollGen.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Batman.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitBouncing.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitCloudLines.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Costix.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="GLCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfiniteZoom.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitRect.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="GL3DScroll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FireWorks.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="DoomTransit.cpp">
+      <Filter>Source Files\FX</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Death_384x205.raw">
+      <Filter>Source Files\FX</Filter>
+    </None>
+    <None Include="HighLines.bin">
+      <Filter>Source Files\FX</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Documents and Settings\Arnaud Storq\Desktop\Debauche_384x205.raw">
+      <Filter>Source Files\FX</Filter>
+    </None>
+  </ItemGroup>
+</Project>
